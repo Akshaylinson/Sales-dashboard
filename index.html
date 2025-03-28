@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sales Analytics Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="dashboard">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <h2>Sales Dashboard</h2>
+            <nav>
+                <ul>
+                    <li><a href="#">Overview</a></li>
+                    <li><a href="#">Revenue</a></li>
+                    <li><a href="#">Products</a></li>
+                    <li><a href="#">Regions</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="content">
+            <header>
+                <h1>Sales Analytics</h1>
+                <div class="filters">
+    <label for="startDate">Start Date:</label>
+      <input type="date" id="startDate"><br>
+    <label for="endDate">End Date:</label>
+      <input type="date" id="endDate"><br>
+
+    <label for="category">Category:</label>
+    <select id="category">
+        <option value="all">All</option>
+        <option value="electronics">Electronics</option>
+        <option value="fashion">Fashion</option>
+        <option value="home">Home & Living</option>
+    </select>
+    <br>
+
+    <label for="region">Region:</label>
+    <select id="region">
+        <option value="all">All</option>
+        <option value="north">North</option>
+        <option value="south">South</option>
+        <option value="east">East</option>
+        <option value="west">West</option>
+    </select>
+</div>
+
+            </header>
+
+            <!-- Chart Containers -->
+            <section class="charts">
+                <div class="chart-card">
+                    <h3>Revenue Trends</h3>
+                    <canvas id="revenueChart"></canvas>
+                </div>
+                <div class="chart-card">
+                    <h3>Product Sales Distribution</h3>
+                    <canvas id="productSalesChart"></canvas>
+                </div>
+                <div class="chart-card">
+                    <h3>Regional Sales Performance</h3>
+                    <canvas id="regionalSalesChart"></canvas>
+                </div>
+                        <button id="downloadCSV">Download CSV</button>
+
+            </section>
+        </main>
+    </div>
+
+    <!-- Chart.js CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
